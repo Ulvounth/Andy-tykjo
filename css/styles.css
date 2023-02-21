@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #dfdfe1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    margin: auto;
+}
+
+.rainydays_logo {
+    height: auto;
+    width: 150px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.navbar li a i {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+.search_bar {
+    border-radius: 40px;
+    background: #fff;
+}
+
+.search_bar input {
+    max-width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-size: 20px;
+}
+
+/* links */
+a {
+    text-decoration: none;
+}
+
+
+.cta {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 38px;
+}
+
+.cta-small {
+    padding: 8px 20px;
+    font-size: 15px;
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+/* Homepage */
+
+.welcome {
+    background-image: url(../images/andy-kogl-LkF3du9aMDs-unsplash.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    margin: auto;
+}
+
+.welcome_content {
+    position: absolute;
+    text-align: left;
+    padding: 5%;
+    max-width: 500px;
+}
+
+.welcome_content h1 {
+    font-size: 60px;
+    color: #fff;
+}
+
+.welcome_content p {
+    margin: 30px 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.middle_text {
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.popular {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 15px auto;
+    gap: 15px;
+    max-width: 1600px;
+}
+
+.popular_now img {
+    width: 100%;
+}
+
+.popular_now {
+    text-align: center;
+    color: #000;
+}
+
+/* Footer */
+
+footer {
+    background-color: #C5D2E5;
+}
+
+.footer_menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1600px;
+    min-height: 30vh;
+    margin: auto;
+    align-items: center;
+}
+
+.footer_child {
+    padding: 30px;
+    text-align: center;
+}
+
+.footer_child h2 {
+    font-size: 35px;
+}
+
+.footer_child i {
+    padding: 15px;
+    font-size: 30px;
+    color: #000;
+}
+
+footer p {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+/* Jackets */
+.jackets {
+    max-width: 1600px;
+    margin: 20px auto;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.products img {
+    width: 100%;
+    grid-column: -1/1;
+}
+
+.products h3,
+.products p {
+    grid-column: 1;
+    font-size: 0.9em;
+
+}
+
+/* About us */
+
+.about_us {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.about_us img {
+    width: 100%;
+    height: 100%;
+}
+.about_us h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.about_us h1,
+.about_us p {
+    padding: 10px;
+}
+
+/* Contact page */
+.contact {
+    position: relative;
+    display: flex;
+    max-width: 1600px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+.contact .content {
+    max-width: 600px;
+    text-align: center;
+}
+.contact .content h1 {
+    font-size: 36px;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+form {
+    padding: 2em;
+}
+
+input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background: rgb(13, 103, 151);
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: .2rem;
+}
+
+button:hover {
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.message {
+    background: green;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.contactForm {
+    width: 40%;
+    padding: 40px;
+}
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Product specific page */
+.product-specific {
+    display: flex;
+    max-width: 1450px;
+    margin: 50px auto;
+}
+
+.product-specific > * {
+    flex: 1;
+}
+
+.product-specific_details {
+    padding: 0px 30px;
+}
+
+.product-specific_details a {
+    display: block;
+    width: 100px;
+    margin: auto;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image_thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+
+/* Checkout page */
+.checkout-page {
+    position: relative;
+    display: flex;
+    min-height: 50vh;
+    margin: 50px auto;
+    max-width: 1600px;
+    justify-content: space-between;
+}
+.checkout-page img {
+    width: 40%;
+}
+
+.checkout-content {
+    padding: 15px;
+}
+
+.checkout-content a {
+    font-size: 20px;
+}
+
+/* Order successfull page */
+
+.order-success {
+    max-width: 1600px;
+    min-height: 50vh;
+    margin: 50px auto;
+}
+
+.order-content {
+    max-width: 600px;
+}
+
+/*Mobile styles*/
+@media only screen and (max-width:666px) {
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        padding: 80px 0 0 10px;
+    }
+    .navbar li {
+        margin-bottom: 25px;
+    }
+    .navbar.active {
+        right: 0;
+    }
+
+    .lg-bag {
+        display: none;
+    }
+
+    #bar {
+        display: initial;
+    }
+
+    #close {
+        display: initial;
+        font-size: 24px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+    }
+
+    .mobile {
+        display: flex;
+        gap: 0.5em;
+        font-size: 1.4em;
+    }
+
+    .welcome_content h1 {
+        font-size: 50px;
+    }
+    
+    .welcome_content p {
+        margin: 30px 0;
+        font-size: 25px;
+    }
+
+    .search_bar {
+        display: none;
+    }
+
+    .footer_menu {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_child h2 {
+        font-size: 30px;
+    }
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+    .product-specific {
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 20px;
+    }
+    .checkout-page {
+        flex-direction: column;
+        max-width: 700px;
+    }
+    
+    .about_us img {
+        display: none;
+    }
+}
+
+
+/*tablet styles*/
+@media only screen and (min-width:667px) and (max-width:956px) {
+
+    ul li a {
+        display: none;
+    }
+
+     .welcome_content h1 {
+        font-size: 50px;
+    }
+    
+    .welcome_content p {
+        margin: 30px 0;
+        font-size: 25px;
+    }
+    
+    .footer_child {
+        padding: 10%;
+    }
+    
+    .footer_child h2 {
+        font-size: 30px;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactInfo {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+    .product-specific {
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 20px;
+    }
+    .checkout-page {
+        flex-direction: column;
+        max-width: 700px;
+    }
+}
+    
+
+/*desktop styles*/
+@media only screen and (min-width:957px) {
+
+    body {
+        margin: auto;
+        width: 100%;
+    }
+
+    .p-menu1 {
+        display: none;
+    }
+}
